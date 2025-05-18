@@ -1,71 +1,79 @@
-# ngx-translate-assistant README
+# ngx-translate-assistant
 
-This is the README for your extension "ngx-translate-assistant". After writing up a brief description, we recommend including the following sections.
+A VS Code extension to supercharge your internationalization workflow for Angular projects using `@ngx-translate/core`.
 
-## Features
+## ✨ Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- 🔍 Scans Angular templates for hardcoded strings
+- 🛠 Extracts and replaces them with translation keys
+- 📁 Automatically updates translation JSON files
+- 🧭 Navigate to translation keys from templates
+- 🧠 Key name generation based on context
+- 🔧 Configurable path and language settings
 
-For example if there is an image subfolder under your extension project workspace:
+## 🚀 Getting Started
 
-\!\[feature X\]\(images/feature-x.png\)
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/ngx-translate-assistant.git
+cd ngx-translate-assistant
+```
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### 2. Install Dependencies
+```bash
+yarn install
+# or
+npm install
+```
 
-## Requirements
+### 3. Launch Extension
+```bash
+code .
+# Press F5 in VS Code to run Extension in Dev Host
+```
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## 🧪 Commands
 
-## Extension Settings
+Open Command Palette (`Ctrl+Shift+P`) and use:
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+- `NGX Translate: Scan Hardcoded Text` – scans `.html` files for hardcoded strings and extracts them to translation file.
+- `NGX Translate: Go To Translation Key` – jumps to the key in your i18n file.
 
-For example:
+## ⚙️ Configuration
+Add settings to your workspace or user `settings.json`:
+```json
+"ngxTranslateAssistant.translationPath": "src/assets/i18n",
+"ngxTranslateAssistant.defaultLang": "en",
+"ngxTranslateAssistant.licenseKey": "your-license-key-if-any"
+```
 
-This extension contributes the following settings:
+## 📂 Folder Structure
+```
+src/
+ ├── extension.ts           # Entry point
+ ├── scanner.ts             # Extraction logic
+ ├── navigation.ts          # Navigation to translation keys
+ └── translationWriter.ts   # JSON writer helper
+```
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## 🔒 License & Monetization
+Basic features are free and open source under MIT license. Premium version (Pro) will support:
+- Google Translate integration
+- Lokalise sync
+- Key usage reports
+- WebView translation editor
 
-## Known Issues
+## 🧠 Roadmap
+- [x] Hardcoded text scanner
+- [x] JSON key extractor
+- [x] Go to translation key
+- [ ] Translation usage analyzer
+- [ ] WebView-based translation editor
+- [ ] XLIFF support
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+## 🛡 License
+MIT © 2025 [Your Name]
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Built with ❤️ for Angular developers who care about localization.
